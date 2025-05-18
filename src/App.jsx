@@ -13,6 +13,8 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [filterStatus, setFilterStatus] = useState("");
 
+
+    // add
   const [addModal, setAddModal] = useState(false);
   const [name, setName] = useState("");
   const [image, setimage] = useState("");
@@ -33,7 +35,7 @@ const App = () => {
         courseName: name,
         image: image,
         aboutCourse: info,
-        status: status === "true" ? true : status === "false" ? false : status, // Приводим статус к логическому
+        status: status === "true" ? true : status === "false" ? false : status, 
       });
       get();
       setAddModal(false);
@@ -72,7 +74,7 @@ const App = () => {
   });
 
 
-
+  // delete
   async function heandleRemove(id) {
     try {
       await axios.delete(`${api}/${id}`);
